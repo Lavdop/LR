@@ -9,7 +9,7 @@ unsigned int GetUnicode() {
         return -1u;
     }
     for (int i = 7; i > 0; i--) {
-        if ((a>>i) & 1 == 1 ) {
+        if (((a>>i) & 1) == 1 ) {
             b++;
         } else {
             break;
@@ -33,7 +33,7 @@ unsigned int ToUnicode(char* s) {
     int b = 0;
     unsigned int res = 0, t = 0;
     for (int i = 7; i > 0; i--) {
-        if ((s[0] >> i) & 1 == 1 ) {
+        if (((s[0] >> i) & 1) == 1 ) {
             b++;
         } else {
             break;
